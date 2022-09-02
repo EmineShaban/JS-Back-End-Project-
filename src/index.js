@@ -10,7 +10,8 @@ app.engine('hbs', handlebars.engine({
 }))
 
 app.set('view engine', 'hbs')
+app.set('views', './src/views')
 app.get('/', (req, res) => {
-    res.send('Hello world')
+    res.render('index')
 })
-app.listen(5001, () => console.log('App is listening on port 5001'))
+app.listen(5001, () => console.log('App is listening on port 5001'))    
