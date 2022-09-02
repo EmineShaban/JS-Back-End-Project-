@@ -9,4 +9,8 @@ app.engine('hbs', handlebars.engine({
     extname:'hbs'
 }))
 
-app.set(vi)
+app.set('view engine', 'hbs')
+app.get('/', (req, res) => {
+    res.send('Hello world')
+})
+app.listen(5001, () => console.log('App is listening on port 5001'))
