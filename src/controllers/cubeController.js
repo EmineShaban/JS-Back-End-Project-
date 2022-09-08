@@ -20,7 +20,7 @@ router.post('/create', (req, res) =>{
         res.status(400).send(err)
     })
 })
-router.get('/cube/details/:id', (req, res) =>{
+router.get('/details/:id', (req, res) =>{
     res.render('details')
 })
 
