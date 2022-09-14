@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const cubeService = require('../services/cubeService')
-const cubes = require('../db.json')
 router.get('/', async (req, res) => {
     let {search, from, to} = req.query
     const cubes = await cubeService.getAll(search, from, to)
