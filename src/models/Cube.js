@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const cubeSchema = new mongoose.Schema({
-    _id: mongoose.Types.ObjectId,
+    // _id: mongoose.Types.ObjectId,
     name: {
         type: String,
         require: true,
@@ -30,7 +30,7 @@ const cubeSchema = new mongoose.Schema({
 })
 
 cubeSchema.path('imageUrl').validate(function () {
-return this.name.startsWith('http')
+return this.imageUrl.startsWith('http')
 }, 'Image url should be a link')
 
 const Cube = mongoose.model('Cube', cubeSchema)
