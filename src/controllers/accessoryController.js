@@ -1,11 +1,11 @@
 const router = require('express').Router()
-const Accessory = require('../models/Accessory')
+const accessoryService = require('../services/accessoryServices')
 router.get('/create', (req, res) => {
     res.render('accessory/create')
 })
 
-router.post('/create', (req, res) => {
-    Accessory.create.apply(req.body)
+router.post('/create', async (req, res) => {
+    await accessoryService.create(req.body)
     res.redirect('/')
 
 })
