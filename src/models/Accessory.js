@@ -11,7 +11,7 @@ const accessorySchema = new mongoose.Schema({
         type: String,
         require: true,
         validate: {
-            validator: /^http?/g,
+            validator: /^https?/g,
             message: "Image url should be a link"
         }
     },
