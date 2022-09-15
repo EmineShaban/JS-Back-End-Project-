@@ -9,6 +9,7 @@ exports.getAll = async (search = '', fromInput, toInput) => {
 }
 
 exports.getOne = (cubeId) => Cube.findById(cubeId).populate('accessories')
+exports.getOneDetails = (cubeId) => Cube.findById(cubeId)
 
 exports.create = (cube) => Cube.create(cube)
 
